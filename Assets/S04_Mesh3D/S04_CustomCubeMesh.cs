@@ -12,7 +12,6 @@ public class S04_CustomCubeMesh : MonoBehaviour
             new Vector3(1f, 0f, 0f), // 1
             new Vector3(1f, 1f, 0f), // 2
             new Vector3(0f, 1f, 0f), // 3
-
             new Vector3(0f, 0f, 1f), // 4
             new Vector3(1f, 0f, 1f), // 5
             new Vector3(1f, 1f, 1f), // 6
@@ -25,29 +24,16 @@ public class S04_CustomCubeMesh : MonoBehaviour
         int[] triangles = new int[]
         {
             // z=0 면 (0,1,2,3)
-            0, 1, 2,
-            0, 2, 3,
 
             // z=1 면 (4,5,6,7)
-            4, 5, 6,
-            4, 6, 7,
 
             // y=0 면 (0,1,5,4)
-            0, 1, 5,
-            0, 4, 5,
-            
 
             // y=1 면 (3,2,6,7)
-            3, 2, 6,
-            3, 7, 6,
 
             // x=0 면 (0,3,7,4)
-            0, 3, 7,
-            0, 4, 7,
 
             // x=1 면 (1,2,6,5)
-            1, 2, 6,
-            1, 5, 6,
         };
 
         Mesh mesh = new Mesh();
