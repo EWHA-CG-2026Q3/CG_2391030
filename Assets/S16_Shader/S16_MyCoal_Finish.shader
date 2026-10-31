@@ -3,7 +3,7 @@
     Properties
     {
         _BaseColor ("Base Color", Color) = (0, 0, 0, 1)
-        [HDR] _EmissionColor ("Emission Color", Color) = (1, 1, 1, 1)
+        [HDR] _EmissionColor ("Emission Color", Color) = (2.0, 1.2, 0.2, 1)
     }
     SubShader
     {

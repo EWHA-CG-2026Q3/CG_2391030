@@ -1,5 +1,11 @@
 ﻿Shader "CG/S16_MyShader"
 {
+    Properties
+    {
+        _BaseColor ("Base Color", Color) = (0.5, 0.5, 0.5, 1)
+        [HDR] _EmissionColor ("Emission Color", Color) = (0, 0, 0, 1)
+    }
+
     SubShader
     {
         Pass
@@ -9,6 +15,9 @@
             #pragma fragment frag
             #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
 
+            float4 _BaseColor;
+            float4 _EmissionColor;
+
             float4 vert(float3 positionOS : POSITION) : SV_POSITION
             {
                 return TransformObjectToHClip(positionOS);
@@ -16,7 +25,7 @@
 
             float4 frag() : SV_Target
             {
-                return float4(1, 0, 0, 1);
+                return float4(_BaseColor.rgb + _EmissionColor.rgb, 1.0);
             }
             ENDHLSL
         }
