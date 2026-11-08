@@ -1,4 +1,4 @@
-﻿Shader "CG/S16_MyCoal_Finish"
+﻿Shader "CG/S16_MyCoal"
 {
     Properties
     {
